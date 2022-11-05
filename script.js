@@ -1,12 +1,6 @@
 //All image (icon) rights reserved to https://limezu.itch.io/
 
 
-/*defeitos: 
-- timed começa no tempo ligeiramente errado.
-- tempo restante começa no tempo errado.
-- tempo gasto não para após completar tabuleiro.*/
-
-
 document.addEventListener('DOMContentLoaded', () => {
   
 const card = document.querySelectorAll('.cell')
