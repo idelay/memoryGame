@@ -1,0 +1,226 @@
+/*Complete css file for both functional and only front end application parts put together by @254278. Some classes may or may not be used because of that. All image (icon) rights reserved to https://limezu.itch.io/*/
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.container2 {
+  padding: 16px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right:24px;
+  background-color: #CACDCA;
+  display:flex;
+  border-radius: 4px;
+  align-items: center;
+  width: 420px;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+}
+
+.grid {
+  display: flex;
+  flex-wrap:wrap;
+  height:128px;
+  width:128px;
+}
+
+.container4 {
+  background-color: #797E79;
+  border-radius: 4px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.17em;
+  font-weight:bolder;
+  width: 150px;
+  margin: 4px;
+  list-style: none;
+}
+
+.container4:hover {
+    background-color: #6A756A;
+}
+
+.container4 li:not(:first-child) {
+  padding: 16px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right:24px;
+  background-color: #98AF99;
+  border-color: #98AF99;
+  justify-content: center;
+  display:flex;
+  border-radius: 4px;
+  align-items: center;
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin:2px;
+    cursor: pointer;
+}
+
+.container4 li:not(:first-child):hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.head {
+  max-width: 480px;
+  background-color: #98AF99;
+  border-radius: 8px;
+  margin: auto;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  color: #3D3D3D;
+}
+
+.score {
+  margin-top: 5px;
+}
+
+.time{
+  margin-top:2px;
+}
+
+.timed{
+  margin-top:2px;
+}
+
+
+.container2x2 {
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1rem;
+  margin: auto;
+  padding: 15px;
+}
+.container4x4 {
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1rem;
+  margin: auto;
+  padding: 15px;
+}
+
+.container6x6 {
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 1rem;
+  margin: auto;
+  padding: 15px;
+}
+
+
+.container8x8 {
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  gap: 1rem;
+  margin: auto;
+  padding: 15px;
+}
+
+.cell div {
+  height: 130px;
+  border-radius: 4px;
+}
+
+.cell {
+  position: relative;
+  cursor: pointer;
+}
+
+.front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #a6a6a6;
+  background-color: #f2f2f2;
+  transform: rotateY(90deg);
+}
+
+.cardBack {
+  background-color: #3D3D3D ;
+}
+
+img {
+  height: 70px;
+  width: 70px;
+}
+
+.flip {
+  transform: rotateY(0deg);
+}
+.match {
+  transform: rotateY(0deg);
+}
+
+.show {
+  transform: rotateY(0deg);
+}
+
+@media screen and (min-width: 770px) {
+  .head {
+    max-width: 760px;
+  }
+
+  .container2x2 {
+    grid-template-columns: repeat(2, auto);
+  }
+
+.container3x3 {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .container4x4 {
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .container5x5 {
+    grid-template-columns: repeat(5, auto);
+  }
+
+  .container6x6 {
+    grid-template-columns: repeat(6, auto);
+  }
+
+  .container7x7 {
+    grid-template-columns: repeat(7, auto);
+  }
+
+  .container8x8 {
+    grid-template-columns: repeat(8, auto);
+  }
+
+  .cell div {
+    height: 80px;
+  }
+}
+
+.center{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+tr:nth-child(even) {
+  background-color: #98AF99;
+}
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style2.css" rel="stylesheet" type="text/css" />
+  <title>log+conta</title>
+</head>
+<body>
+
+<h2>Fazer Login</h2>
+
+<form action="/action_page.php" method="post">
+  <div class="container">
+    <label for="uname"><b>Usuario</b></label>
+    <input type="text" placeholder="Insira aqui seu Usuario" name="uname" id="uname" required>
+
+    <label for="psw"><b>Senha</b></label>
+    <input type="text" placeholder="Insira aqui sua Senha" name="psw" id="psw" required>
+    
+        
+    <!--<button type="submit"> Login</button>-->
+    <button type="submit" onClick="location.href='escolhaGAME.html'">Login</button>
+    
+    <label>
+      <input type="checkbox" checked="checked" name="lembre-se"> Lembre-se de mim
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#ccc">
+    <button type="button" class="cancelar">Cancelar</button>
+    <span class="psw">Esqueci a <a href="esqueciasenha.html">Senha?</a></span>
+    <span class="novousuario">Não possuo conta? <a href="#"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Criar Nova</button></a></span>
+  </div>
+ 
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Registre-se</h1>
+      <p>Preencha as seguintes informações para criar sua conta</p>
+      <hr>
+      <label for="nome"><b>Nome</b></label>
+      <input type="text" placeholder="Nome completo" name="nome" id="nome" required>
+
+      <label for="date"><b>Data de Nascimento</b></label>
+      <input type="text" placeholder="dd/mm/aaaa" name="date" id="date" required>
+      <br>
+      <label for="cpf"><b>CPF</b></label>
+      <input type="text" placeholder="Insira seu CPF" name="cpfform" id="cpf" required>
+      <br>
+      <label for="telefone"><b>Telefone</b></label>
+      <input type="text" placeholder="(xx) xxxxx-xxxx" name="phnumber" id="phnumber" required>
+      <br>
+      <label for="email"><b>E-mail</b></label>
+      <!--<input type="email" placeholder="Insira seu e-mail" name="email" required>-->
+      <input type="text" placeholder="Insira seu e-mail" name="email" id="email" required>
+      <br>
+      <label for="uname"><b>Usuário</b></label>
+      <input type="text" placeholder="Nome de usuário" name="uname" id="username" required>
+      <br>
+      <label for="psw"><b>Senha</b></label>
+      <input type="text" placeholder="Insira uma nova senha" name="psw" id="psword" required>
+      <br>
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembre-se de mim
+      </label>
+
+     
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelar">Cancelar</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</form>
+
+</body>
+</html>
