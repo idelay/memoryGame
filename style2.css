@@ -11,11 +11,12 @@ input[type=text], input[type=password] {
 
 
 button {
-  background-color: #98AF99;
+  color: #98AF99;
   border-color: #98af99;
   padding: 14px 20px;
   margin: 8px 0;
   border-radius: 8px;
+  border-width: 8px;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
