@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="style2.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style2.css" rel="stylesheet" type="text/css" />
+  <title>login</title>
 </head>
 <body>
 
@@ -11,13 +13,13 @@
 <form action="/action_page.php" method="post">
   <div class="container">
     <label for="uname"><b>Usuario</b></label>
-    <input type="text" placeholder="Insira aqui seu Usuario" name="uname" required>
+    <input type="text" placeholder="Insira aqui seu Usuario" name="uname" id="uname" required>
 
     <label for="psw"><b>Senha</b></label>
-    <input type="password" placeholder="Insira aqui sua Senha" name="psw" required>
-        
-     <button type="submit"><a href="index.html">
-      Login</a></button>
+    <input type="password" placeholder="Insira aqui sua Senha" name="psw" id="psw" required>
+     
+    <button onclick="location.href='escolha.html'" type="submit">Login</button>
+
     <label>
       <input type="checkbox" checked="checked" name="lembre-se"> Lembre-se de mim
     </label>

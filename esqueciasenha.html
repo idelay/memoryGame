@@ -4,22 +4,23 @@
     <title>Recuperação de senha</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="style2.css" rel="stylesheet" type="text/css">
+      <link href="style2.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <div class="container">
+      <div class="container">
         <h2>Redefinir Senha</h2>
 
         <h4>Preencha o formulario abaixo para definir uma nova senha</h4>
         
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Insira seu e-mail" name="email" required>
+            <input type="text" placeholder="Insira seu e-mail" name="email" id="email" required>
             <br>
             <label for="psw"><b>Senha</b></label>
-            <input type="text" placeholder="Insira uma nova senha" name="psw" required><br>
-            <a href="index.html" class="signupbtn">Redefinir senha</a>
-                
-            </div>
+            <input type="text" placeholder="Insira uma nova senha" name="psw" id="psw" required><br>
+            <form >
+              <button type="submit" class="signupbtn" formaction="index.html">Criar Nova Senha</button>
+            </form>
+      </div>
     </body>
     </html>
     

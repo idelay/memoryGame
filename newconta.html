@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <link href="style2.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Criar conta</title>
+  <link href="style2.css" rel="stylesheet" type="text/css" />
+  
 <body>
 
-<h2>Modal Signup Form</h2>
+<h2>Formulario de Criação de conta</h2>
 
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
 
@@ -12,16 +16,16 @@
   <form class="modal-content" action="/action_page.php">
     <div class="container">
       <h1>Registre-se</h1>
-      <p>Please fill in this form to create an account.</p>
+      <p>Preencha para Criar uma nova conta.</p>
       <hr>
       <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
+      <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
       <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
       
       <label>
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
