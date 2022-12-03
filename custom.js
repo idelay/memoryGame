@@ -8,13 +8,14 @@ cadForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
 
-    var Nome = document.getElementById("Nome").value;
-    var RA = document.getElementById("RA").value;
-    var Email = document.getElementById("Email").value;
-    var Idade = document.getElementById("Idade").value;
-    var Telefone = document.getElementById("Telefone").value;
-    var endereco = document.getElementById("endereco").value;
-    var Sexo = document.getElementById("Sexo").value;
+    var Nome = document.getElementById("nome").value;
+    var Data_de_Nascimento = document.getElementById("date").value;
+    var Cpf = document.getElementById("cpf").value;
+    var Telefone = document.getElementById("phnumber").value;
+    var Email = document.getElementById("email").value;
+    var Usuário = document.getElementById("user").value;
+    var Senha = document.getElementById("psw").value;
+    var Repitir Senha' = document.getElementById("psw-repeat").value;
 
     let usuarios = new Array();
 
@@ -24,13 +25,13 @@ cadForm.addEventListener("submit", (e) => {
         usuarios = JSON.parse(localStorage.getItem("usuarios"));
     }
 
-    usuarios.push({ Nome, RA, Email, Idade, Telefone, endereco, Sexo });
+    usuarios.push({ nome, date, cpf, phnumber, email, user, psw, psw-repeat});
 
  
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
 
-    document.getElementById("conteudo").insertAdjacentHTML('beforeend', "Nome: " + Nome + "RA:" + RA +"<br>E-mail: " + Email + "Idade:" + Idade + "Telefone:" + Telefone + "endereco:" + endereco + "Sexo:" + Sexo + "<br><hr>");
+//     document.getElementById("conteudo").insertAdjacentHTML('beforeend', "Nome: " + Nome + ":Data de Nascimento" + date +"<br>:Cpf" + cpf + ":Telefone:" + phnumber + ":Email" + email + ":Usuário" + user + ":Senha" + psw + ":Repitir Senha" + psw-repeat + "<br><hr>");
 
 
     document.getElementById("msg").innerHTML = "<p style='color: green'>Usuário salvo no localStorage!</p>";
