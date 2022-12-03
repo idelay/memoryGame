@@ -5,10 +5,10 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 if(empty($dados['email'])){
     $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário preencher o campo Email!</div>"];
 }
-elseif(empty($dados['Nome'])){
+elseif(empty($dados['psw'])){
     $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário preencher o campo Nome!</div>"];
 }
-elseif(empty($dados['endereco'])){
+elseif(empty($dados['psw-repeat'])){
     $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário preencher o campo endereco!</div>"];
 }
 else {
