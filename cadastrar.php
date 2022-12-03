@@ -31,7 +31,7 @@ else {
     VALUES (:Nome, :RA, :Email, Idade, :Telefone, :endereco, :Sexo)";
     $cad_usuario = $conn->prepare($query_usuario);
     $cad_usuario->bindParam(':Nome', $dados['nome']);
-    $cad_usuario->bindParam(':Data de Nascimento', $dados['date']);
+    $cad_usuario->bindParam(':Data_de_Nascimento', $dados['date']);
     $cad_usuario->bindParam(':Cpf', $dados['cpf']);
     $cad_usuario->bindParam(':Telefone', $dados['phnumber']);
     $cad_usuario->bindParam(':Email', $dados['email']);
