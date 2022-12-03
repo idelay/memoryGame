@@ -4,7 +4,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$dbname = "estudante";
+$dbname = "Usuarios";
 $port = 3306;
 
 try{
