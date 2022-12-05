@@ -18,17 +18,32 @@
       <h1>Registre-se</h1>
       <p>Preencha para Criar uma nova conta.</p>
       <hr>
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Digite seu Email" name="email" id="email" required>
+      <label for="nome"><b>Nome</b></label>
+      <input type="text" placeholder="Nome completo" name="nome" id="nome" required>
 
+      <label for="date"><b>Data de Nascimento</b></label>
+      <input type="text" placeholder="dd/mm/aaaa" name="date" id="date" required>
+      <br>
+      <label for="cpf"><b>CPF</b></label>
+      <input type="text" placeholder="Insira seu CPF" name="cpfform" id="cpf" required>
+      <br>
+      <label for="telefone"><b>Telefone</b></label>
+      <input type="text" placeholder="(xx) xxxxx-xxxx" name="telefone" id="telefone" required>
+      <br>
+      <label for="email"><b>E-mail</b></label>
+      <input type="text" placeholder="Insira seu e-mail" name="email" id="email" required>
+      <br>
+      <label for="user"><b>Usuário</b></label>
+      <input type="text" placeholder="Nome de usuário" name="username" id="user" required>
+      <br>
       <label for="psw"><b>Senha</b></label>
-      <input type="password" placeholder="Digite A Senha" name="psw" id="psw" required>
-
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repita sua Senha" name="psw-repeat" id="psw-repeat" required>
-      
+      <input type="text" placeholder="Insira uma nova senha" name="psw" id="psw" required>
+      <br>
+      <label for="pswrepeat"><b>RepitirSenha</b></label>
+      <input type="text" placeholder="Insira uma nova senha" name="pswrepeat" id="pswrepeat" required>
+      <br>
       <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembre-se de mim
       </label>
 
      
@@ -42,10 +57,9 @@
 </div>
 
 <script>
-// Get the modal
+
 var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
