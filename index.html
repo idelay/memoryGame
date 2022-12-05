@@ -34,7 +34,7 @@
 
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content" action="/action_page.php">
+  <form class="modal-content" action="/action_page.php" method="POST">
     <div class="container">
       <h1>Registre-se</h1>
       <p>Preencha as seguintes informações para criar sua conta</p>
@@ -60,6 +60,9 @@
       <label for="psw"><b>Senha</b></label>
       <input type="text" placeholder="Insira uma nova senha" name="psw" id="psw" required>
       <br>
+      <label for="pswrepeat"><b>RepitirSenha</b></label>
+      <input type="text" placeholder="Insira uma nova senha" name="pswrepeat" id="pswrepeat" required>
+      <br>
       <label>
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembre-se de mim
       </label>
@@ -68,21 +71,13 @@
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelar">Cancelar</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="submit" class="signupbtn" id="conteudo">Registre-se</button>
       </div>
     </div>
   </form>
 </div>
 
-<script>
-var modal = document.getElementById('id01');
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+<script src="./custom.js"></script>
 
 </body>
 </html>

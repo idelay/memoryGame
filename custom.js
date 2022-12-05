@@ -1,3 +1,11 @@
+var modal = document.getElementById('id01');
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 
 var cadForm = document.getElementById("cad-usuario-form");
 
@@ -15,7 +23,7 @@ cadForm.addEventListener("submit", (e) => {
     var Email = document.getElementById("email").value;
     var Usuário = document.getElementById("user").value;
     var Senha = document.getElementById("psw").value;
-    var Repitir Senha' = document.getElementById("psw-repeat").value;
+    var RepitirSenha = document.getElementById("pswrepeat").value;
 
     let usuarios = new Array();
 
@@ -25,16 +33,16 @@ cadForm.addEventListener("submit", (e) => {
         usuarios = JSON.parse(localStorage.getItem("usuarios"));
     }
 
-    usuarios.push({ nome, date, cpf, phnumber, email, user, psw, psw-repeat});
+    usuarios.push({ nome, date, cpf, phnumber, email, user, psw, pswrepeat});
 
  
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
 
-//     document.getElementById("conteudo").insertAdjacentHTML('beforeend', "Nome: " + Nome + ":Data de Nascimento" + date +"<br>:Cpf" + cpf + ":Telefone:" + phnumber + ":Email" + email + ":Usuário" + user + ":Senha" + psw + ":Repitir Senha" + psw-repeat + "<br><hr>");
+   document.getElementById("conteudo").insertAdjacentHTML('beforeend', "Nome: " + Nome + ":Data de Nascimento" + date +"<br>:Cpf" + cpf + ":Telefone:" + phnumber + ":Email" + email + ":Usuário" + user + ":Senha" + psw + ":Repitir Senha" + pswrepeat + "<br><hr>");
 
 
-    document.getElementById("msg").innerHTML = "<p style='color: green'>Usuário salvo no localStorage!</p>";
+    document.getElementById("msg").innerHTML = "<p style='color: green'>Usuário registrado com sucesso!</p>";
 });
 
 

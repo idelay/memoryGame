@@ -1,6 +1,24 @@
 <?php 
 
 include_once "conection.php";
+$contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : "";
+
+
+if ($contentType === "application/json") {
+
+    $conteudo = trim(file_get_contents("php://input"));
+
+
+
+    $conteudo_dados = json_decode($conteudo, true);
+
+
+    if (!is_array($conteudo_dados)) {
+
+        http_response_code(400);
+        echo json_encode(['msg' => "<p style='color: #f00'>Erro: Requisição inválida!</p>"]);
+    } else{
+
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 if(empty($dados['nome'])){
     $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário preencher o campo Nome!</div>"];
@@ -23,11 +41,11 @@ elseif(empty($dados['user'])){
 elseif(empty($dados['psw'])){
     $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário preencher o campo senha!</div>"];
 }
-elseif(empty($dados['psw-repeat'])){
+elseif(empty($dados['pswrepeat'])){
     $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário preencher o campo repitir senha!</div>"];
 }
 else {
-    $querry_usuario = "INSERT INTO usuario (nome, phnumber, email, psw, psw-repeat) 
+    $querry_usuario = "INSERT INTO usuario (nome, phnumber, email, psw, pswrepeat) 
     VALUES (:Nome, :RA, :Email, Idade, :Telefone, :endereco, :Sexo)";
     $cad_usuario = $conn->prepare($query_usuario);
     $cad_usuario->bindParam(':Nome', $dados['nome']);
@@ -37,7 +55,7 @@ else {
     $cad_usuario->bindParam(':Email', $dados['email']);
     $cad_usuario->bindParam(':Usuário', $dados['user']);
     $cad_usuario->bindParam(':Senha', $dados['psw']);
-    $cad_usuario->bindParam(':Repitir Senha', $dados['psw-repeat']);
+    $cad_usuario->bindParam(':Repitir Senha', $dados['pswrepeat']);
 
     $cad_usuario->execute();
     if ($cad_usuario->rowCount()) {
@@ -47,3 +65,10 @@ else {
     }
     echo json_encode($retorna);
 }
+}
+} else {
+
+    http_response_code(400);
+    echo json_encode(['msg' => "<p style='color: #f00'>Erro: Requisição inválida!</p>"]);
+}
+
