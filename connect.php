@@ -6,7 +6,7 @@ $email = $_POST['email'];
 $cpf = $_POST['cpfform'];
 $phone = $_POST['telefone'];
 $login = $_POST['username'];
-$password = $_POST['psw'];
+$password = $_POST['password'];
 
 
 $servername = 'localhost';
