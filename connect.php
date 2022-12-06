@@ -3,7 +3,7 @@
 $name = $_POST['nome'];
 $datnasc = $_POST['date'];
 $email = $_POST['email'];
-$cpf = $_POST['cpf'];
+$cpf = $_POST['cpfform'];
 $phone = $_POST['telefone'];
 $login = $_POST['username'];
 $password = $_POST['password'];
