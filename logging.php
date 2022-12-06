@@ -5,14 +5,14 @@ if(!empty($_POST['uname']) && !empty($_POST['pass'])) {
     $user=$_POST['uname'];  
     $pass=$_POST['pass'];  
   
-    $con=mysql_connect('localhost','root','') or die(mysql_error());  
-    mysql_select_db('usuario') or die("Banco de dados não pôde ser conectado");  
+    $con=mysqli_connect('localhost','root','') or die(mysqli_error());  
+    mysqli_select_db('usuario') or die("Banco de dados não pôde ser conectado");  
   
-    $query=mysql_query("SELECT * FROM usuario WHERE login='".$user."' AND senha='".$pass."'");  
-    $numrows=mysql_num_rows($query);  
+    $query=mysqli_query("SELECT * FROM usuario WHERE login='".$user."' AND senha='".$pass."'");  
+    $numrows=mysqli_num_rows($query);  
     if($numrows!=0)
     {  
-    while($row=mysql_fetch_assoc($query))  
+    while($row=mysqli_fetch_assoc($query))  
     {  
     $dbusername=$row['login'];  
     $dbpassword=$row['senha'];  
