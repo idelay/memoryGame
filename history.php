@@ -56,7 +56,7 @@ echo "<table border='1'>
 
  
 
-while($row = mysql_fetch_array($result))
+while($row = mysqli_fetch_array($result))
 
   {
 
@@ -83,7 +83,7 @@ while($row = mysql_fetch_array($result))
 echo "</table>";
 
 
-mysql_close($con);
+mysqli_close($con);
 
 ?>
   </div>
