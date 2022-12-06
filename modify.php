@@ -25,7 +25,7 @@ $sql = mysqli_query($connect, $sql);
 
 
 if ($sql == true) {
-       echo "Usuário salvo.";
+       header("Location: index.html"); 
 } else {
        echo "Usuário não foi salvo.";
 }
