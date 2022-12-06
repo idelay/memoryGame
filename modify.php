@@ -1,5 +1,4 @@
 <?php
-include('logging.php');
 session_start();
 $name = $_POST['nome'];
 $email = $_POST['email'];
