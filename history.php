@@ -82,7 +82,6 @@ while($row = mysql_fetch_array($result))
 
 echo "</table>";
 
- 
 
 mysql_close($con);
 
