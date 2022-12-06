@@ -15,7 +15,7 @@
  
   <table class="center">
   <?php
-
+session_start();
 $con = mysqli_connect("localhost","root","");
 
 if (!$con)
@@ -32,7 +32,7 @@ mysqli_select_db($con,'jogo_da_memoria');
 
  
 
-$result = mysqli_query($con,"SELECT * FROM history WHERE login = ");
+$result = mysqli_query($con,"SELECT * FROM history WHERE login = '" . $_SESSION["sess_user"] ."';"");
 
  
 echo "<tr>
