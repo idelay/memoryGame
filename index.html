@@ -23,21 +23,21 @@
     <?php  
 if(isset($_POST["submit"])){  
   
-if(!empty($_POST['user']) && !empty($_POST['pass'])) {  
-    $user=$_POST['user'];  
+if(!empty($_POST['uname']) && !empty($_POST['pass'])) {  
+    $user=$_POST['uname'];  
     $pass=$_POST['pass'];  
   
     $con=mysql_connect('localhost','root','') or die(mysql_error());  
-    mysql_select_db('user_registration') or die("Banco de dados não pôde ser conectado");  
+    mysql_select_db('usuario') or die("Banco de dados não pôde ser conectado");  
   
     $query=mysql_query("SELECT * FROM usuario WHERE login='".$user."' AND senha='".$pass."'");  
     $numrows=mysql_num_rows($query);  
-    if($numrows!=0)  
+    if($numrows!=0)
     {  
     while($row=mysql_fetch_assoc($query))  
     {  
-    $dbusername=$row['username'];  
-    $dbpassword=$row['password'];  
+    $dbusername=$row['login'];  
+    $dbpassword=$row['senha'];  
     }  
   
     if($user == $dbusername && $pass == $dbpassword)  
@@ -95,8 +95,8 @@ if(!empty($_POST['user']) && !empty($_POST['pass'])) {
       <label for="user"><b>Usuário</b></label>
       <input type="text" placeholder="Nome de usuário" name="username" id="user" required>
       <br>
-      <label for="psw"><b>Senha</b></label>
-      <input type="text" placeholder="Insira uma senha" name="password" id="psw" required>
+      <label for="password"><b>Senha</b></label>
+      <input type="text" placeholder="Insira uma senha" name="password" id="password" required>
       <br>
       <label>
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembre-se de mim
