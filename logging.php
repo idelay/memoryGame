@@ -21,7 +21,7 @@ if(!empty($_POST['uname']) && !empty($_POST['pass'])) {
     if($user == $dbusername && $pass == $dbpassword)  
     {  
     session_start();  
-    $_SESSION["sess_user"]=$user;  
+    $_SESSION['sess_user']=$user;  
   
     /* Redirect browser to another page */  
     header("Location: escolhaGAME.html");  
