@@ -14,151 +14,79 @@
   <h1>Histórico</h1>
  
     <table class="center">
-      <tr>
-        <td>Nome</td>
-        <td>Tabuleiro</td>
-        <td>Modalidade</td> 
-        <td>Tempo Gasto</td> 
-        <td>Resultado</td>
-        <td>Data e hora</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>217 segundos</td> 
-        <td>Venceu</td>
-        <td>18:28 22/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Normal</td> 
-        <td>222 segundos</td> 
-        <td>Venceu</td>
-        <td>16:56 22/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>250 segundos</td> 
-        <td>Venceu</td>
-        <td>14:32 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>289 segundos</td> 
-        <td>Venceu</td>
-        <td>14:26 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>290 segundos</td> 
-        <td>Venceu</td>
-        <td>14:14 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>290 segundos</td> 
-        <td>Venceu</td>
-        <td>14:14 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>290 segundos</td> 
-        <td>Venceu</td>
-        <td>14:14 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>290 segundos</td> 
-        <td>Venceu</td>
-        <td>14:14 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>290 segundos</td> 
-        <td>Venceu</td>
-        <td>14:14 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>290 segundos</td> 
-        <td>Venceu</td>
-        <td>14:14 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>290 segundos</td> 
-        <td>Venceu</td>
-        <td>14:14 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>290 segundos</td> 
-        <td>Venceu</td>
-        <td>14:14 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>290 segundos</td> 
-        <td>Venceu</td>
-        <td>14:14 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>290 segundos</td> 
-        <td>Venceu</td>
-        <td>14:14 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>290 segundos</td> 
-        <td>Venceu</td>
-        <td>14:14 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>290 segundos</td> 
-        <td>Venceu</td>
-        <td>14:14 20/09/2022</td>
-      </tr>
-      <tr>
-        <td>Pedro H. Cabral</td>
-        <td>8x8</td>
-        <td>Timed</td> 
-        <td>290 segundos</td> 
-        <td>Venceu</td>
-        <td>14:14 20/09/2022</td>
-      </tr>
-    </table>
+      <?php
+
+$con = mysql_connect("localhost","root","");
+
+if (!$con)
+
+  {
+
+  die('Falha ao conectar: ' . mysql_error());
+
+  }
+
+ 
+
+mysql_select_db("jogo_da_memoria", $con);
+
+ 
+
+$result = mysql_query("SELECT * FROM history");
+
+ 
+
+echo "<table border='1'>
+
+<tr>
+
+<th>Nome</th>
+
+<th>Tabuleiro</th>
+
+<th>Modalidade</th>
+
+<th>Tempo gasto</th>
+
+<th>Resultado</th>
+
+<th>Data e hora</th>
+
+</tr>";
+
+ 
+
+while($row = mysql_fetch_array($result))
+
+  {
+
+  echo "<tr>";
+
+  echo "<td>" . $row['nome_player'] . "</td>";
+
+  echo "<td>" . $row['tabuleiro'] . "</td>";
+
+  echo "<td>" . $row['modalidade'] . "</td>";
+
+  echo "<td>" . $row['tempo_gasto'] . "</td>";
+    
+  echo "<td>" . $row['resultado'] . "</td>";
+
+  echo "<td>" . $row['data_hora'] . "</td>";
+
+  echo "<td>" . $row['login_player'] . "</td>";
+
+  echo "</tr>";
+
+  }
+
+echo "</table>";
+
+ 
+
+mysql_close($con);
+
+?>
   </div>
 
   <div class="centerText">
