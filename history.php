@@ -32,7 +32,7 @@ mysqli_select_db($con,'jogo_da_memoria');
 
  
 
-$result = mysqli_query($con,"SELECT * FROM history WHERE login = '" . $_SESSION["sess_user"] ."';");
+$result = mysqli_query($con,"SELECT * FROM history WHERE login_player = '" . $_SESSION["sess_user"] ."';");
 
  
 echo "<tr>
