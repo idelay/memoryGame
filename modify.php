@@ -2,8 +2,8 @@
 
 $name = $_POST['nome'];
 $email = $_POST['email'];
-$phone = $_POST['telefone'];
-$password = $_POST['password'];
+$phone = $_POST['phnumber'];
+$password = $_POST['psw'];
 
 
 $servername = 'localhost';
