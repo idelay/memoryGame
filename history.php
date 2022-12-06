@@ -32,7 +32,7 @@ mysqli_select_db($con,'jogo_da_memoria');
 
  
 
-$result = mysqli_query($con,"SELECT * EXCEPT(login_player) FROM history");
+$result = mysqli_query($con,"SELECT * FROM history WHERE login = ");
 
  
 echo "<tr>
@@ -48,6 +48,8 @@ echo "<tr>
 <th>Resultado</th>
 
 <th>Data e hora</th>
+
+<th>Login</th>
 
 </tr>";
 
