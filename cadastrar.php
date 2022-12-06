@@ -35,26 +35,26 @@ elseif(empty($dados['phnumber'])){
 elseif(empty($dados['email'])){
     $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário preencher o campo Email!</div>"];
 }
-elseif(empty($dados['user'])){
+elseif(empty($dados['login'])){
     $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário preencher o campo Usuario!</div>"];
 }
-elseif(empty($dados['psw'])){
+elseif(empty($dados['password'])){
     $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário preencher o campo senha!</div>"];
 }
 elseif(empty($dados['pswrepeat'])){
     $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'>Erro: Necessário preencher o campo repitir senha!</div>"];
 }
 else {
-    $querry_usuario = "INSERT INTO usuario (nome, phnumber, email, psw, pswrepeat) 
-    VALUES (:Nome, :RA, :Email, Idade, :Telefone, :endereco, :Sexo)";
+    $querry_usuario = "INSERT INTO usuario (nome, datnasc, cpf, phone, email, login, password, pswrepeat) 
+    VALUES ('$name','$datnasc','$cpf','$phone','$email','$login','$password')";
     $cad_usuario = $conn->prepare($query_usuario);
     $cad_usuario->bindParam(':Nome', $dados['nome']);
-    $cad_usuario->bindParam(':Data_de_Nascimento', $dados['date']);
+    $cad_usuario->bindParam(':Data_de_Nascimento', $dados['datnasc']);
     $cad_usuario->bindParam(':Cpf', $dados['cpf']);
     $cad_usuario->bindParam(':Telefone', $dados['phnumber']);
     $cad_usuario->bindParam(':Email', $dados['email']);
     $cad_usuario->bindParam(':Usuário', $dados['user']);
-    $cad_usuario->bindParam(':Senha', $dados['psw']);
+    $cad_usuario->bindParam(':Senha', $dados['password']);
     $cad_usuario->bindParam(':Repitir Senha', $dados['pswrepeat']);
 
     $cad_usuario->execute();
