@@ -32,7 +32,7 @@ mysqli_select_db($con,'jogo_da_memoria');
 
  
 
-$result = mysqli_query("SELECT * FROM history");
+$result = mysqli_query($con,"SELECT * FROM history");
 
  
 
