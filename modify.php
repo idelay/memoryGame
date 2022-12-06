@@ -17,8 +17,9 @@ if ($connect-> connect_error) {
 }
 
 else {
-       $sql = ("INSERT INTO usuario(nome,telefone,email,senha)
-       VALUES ('$name','$phone','$email','$password')");
+       $sql = ("UPDATE usuario
+       SET nome = $name,telefone = $phone,email = $email,senha = $password
+       WHERE login = $_SESSION['sess_user']");
 }
 
 $sql = mysqli_query($connect, $sql);
