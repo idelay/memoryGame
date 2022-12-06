@@ -23,7 +23,7 @@ if(!empty($_POST['uname']) && !empty($_POST['pass'])) {
     session_start();  
     $_SESSION['sess_user']=$user;  
   
-    /* Redirect browser */  
+    /* Redirect browser to another page */  
     header("Location: escolhaGAME.html");  
     }  
     } else {  
