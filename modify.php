@@ -18,7 +18,10 @@ if ($connect-> connect_error) {
 
 else {
        $sql = ("UPDATE usuario
-       SET usuario.nome = $name, usuario.telefone = $phone, usuario.email = $email, usuario.senha = $password
+       SET nome = '$name', 
+       telefone = '$phone', 
+       email = '$email', 
+       senha = '$password'
        WHERE login = '" . $_SESSION["sess_user"] ."';");
 }
 
