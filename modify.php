@@ -16,7 +16,7 @@ if ($connect-> connect_error) {
        die('connection failed :' .$connect-> $connect_error);
 }
 
-else {
+else { session_start();
        $sql = ("UPDATE usuario
        SET nome = $name,telefone = $phone,email = $email,senha = $password
        WHERE login = $_SESSION['sess_user']");
