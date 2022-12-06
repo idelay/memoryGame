@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 $name = $_POST['nome'];
 $email = $_POST['email'];
 $phone = $_POST['phnumber'];
@@ -16,10 +17,10 @@ if ($connect-> connect_error) {
        die('connection failed :' .$connect-> $connect_error);
 }
 
-else { session_start();
+else {
        $sql = ("UPDATE usuario
        SET nome = $name, telefone = $phone, email = $email, senha = $password
-       WHERE login = $_SESSION["sess_user"]");
+       WHERE login = $_SESSION['sess_user']");
 }
 
 $sql = mysqli_query($connect, $sql);
