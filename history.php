@@ -13,8 +13,8 @@
   <div class="centerText">
   <h1>Histórico</h1>
  
-    <table class="center">
-      <?php
+  <table class="center">
+  <?php
 
 $con = mysqli_connect("localhost","root","");
 
@@ -32,13 +32,10 @@ mysqli_select_db($con,'jogo_da_memoria');
 
  
 
-$result = mysqli_query($con,"SELECT * FROM history");
+$result = mysqli_query($con,"SELECT * EXCEPT(login_player) FROM history");
 
  
-
-echo "<table border='1'>
-
-<tr>
+echo "<tr>
 
 <th>Nome</th>
 
