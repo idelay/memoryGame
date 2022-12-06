@@ -3,7 +3,7 @@
 $name = $_POST['nome'];
 $datnasc = $_POST['date'];
 $email = $_POST['email'];
-$cpf = $_POST['cpfform'];
+$cpf = $_POST['cpf'];
 $phone = $_POST['telefone'];
 $login = $_POST['username'];
 $password = $_POST['password'];
@@ -11,7 +11,6 @@ $password = $_POST['password'];
 
 $servername = 'localhost';
 $username = 'root';
-$password = '';
 $dbname = 'jogo_da_memoria';
 $connect = new mysqli("localhost","root",'',"jogo_da_memoria");
 
