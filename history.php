@@ -86,6 +86,8 @@ mysqli_close($con);
 
 ?>
   </div>
+  </table>
+  </div>
 
   <div class="centerText">
   <br><br><a href="escolhaGAME.html">Voltar</a><br><br>
