@@ -16,23 +16,23 @@
     <table class="center">
       <?php
 
-$con = mysql_connect("localhost","root","");
+$con = mysqli_connect("localhost","root","");
 
 if (!$con)
 
   {
 
-  die('Falha ao conectar: ' . mysql_error());
+  die('Falha ao conectar: ' . mysqli_error());
 
   }
 
  
 
-mysql_select_db("jogo_da_memoria", $con);
+mysqli_select_db("jogo_da_memoria", $con);
 
  
 
-$result = mysql_query("SELECT * FROM history");
+$result = mysqli_query("SELECT * FROM history");
 
  
 
