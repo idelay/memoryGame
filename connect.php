@@ -3,9 +3,9 @@
 $name = $_POST['nome'];
 $datnasc = $_POST['date'];
 $email = $_POST['email'];
-$cpf = $_POST['cpf'];
+$cpf = $_POST['cpfform'];
 $phone = $_POST['telefone'];
-$login = $_POST['user'];
+$login = $_POST['username'];
 $password = $_POST['psw'];
 
 
@@ -21,7 +21,7 @@ if ($connect-> connect_error) {
 }
 
 else {
-       $sql = ("INSERT INTO students(nome,data_nasc,cpf,telefone,email,login,senha)
+       $sql = ("INSERT INTO usuario(nome,data_nasc,cpf,telefone,email,login,senha)
        VALUES ('$name','$datnasc','$cpf','$phone','$email','$login','$password')");
 }
 
