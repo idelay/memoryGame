@@ -9,10 +9,10 @@ if(!empty($_POST['uname']) && !empty($_POST['pass'])) {
     mysqli_select_db($con,'jogo_da_memoria') or die("Banco de dados não pôde ser conectado");  
   
     $query=mysqli_query($con,"SELECT * FROM usuario WHERE login='".$user."' AND senha='".$pass."'");  
-    $numrows=mysqli_num_rows($con,$query);  
+    $numrows=mysqli_num_rows($query);  
     if($numrows!=0)
     {  
-    while($row=mysqli_fetch_assoc($con,$query))  
+    while($row=mysqli_fetch_assoc($query))  
     {  
     $dbusername=$row['login'];  
     $dbpassword=$row['senha'];  
